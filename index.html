@@ -12,7 +12,37 @@
     <title>Pizza village</title>
   </head>
   <body>
+    <!-- photo attribute: Photo by <a href="https://unsplash.com/@shouravsheikh01?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Shourav Sheikh</a> on <a href="https://unsplash.com/images/food/pizza?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+   -->
+    <!-- pizza order page start -->
+    <section>
+      <form action="" class="pizza-form">
+        <div class="pizza-size">
+          <input type="radio" name="size" value="sm" required/>SM
+          <input type="radio" name="size" value="md" required/>MD
+          <input type="radio" name="size" value="lg" required/>LG
+        </div>
 
+        <div class="toppigs">
+          <input type="radio" name="topps" value="pepperoni" required/>Pepperoni
+          <input type="radio" name="topps" value="olives" required/>black olives
+          <input type="radio" name="topps" value="roast" required/>Roasted pepper
+        </div>
+   
+        <div class="crust-type">
+          <select name="crust" class="crust">
+            <option value=""></option>
+            <option value="gluten">Gluten free</option>
+            <option value="crispy">Crispy</option>
+            <option value="stuffed">Stuffed</option>
+          </select>
+        </div>
+        <button class="pizza-choice btn btn-outline-info">Order now</button>
+      </form>
+      <p class="output"></p>
+    </section>
+
+    <!-- pizza order page end -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="./src/js/jquery-3.6.0.js"></script>
     <script src="./src/js/popper-2.11.2.js"></script>
