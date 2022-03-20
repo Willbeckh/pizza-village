@@ -1,15 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 /* General Styles Start */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+.btn {
+  background-color: #ff7e00;
+  font-weight: 500;
+  /* font-size: 1.2em; */
 }
 /* General Styles End */
 
 /* order page style start */
+.order-heading {
+  font-weight: 800;
+}
+span.title {
+  color: #ff7e00;
+}
+.form-subtitles {
+	font-weight: bold;
+}
+.card {
+  border: none;
+}
+.card-text:first-of-type {
+  font-weight: bold;
+}
+.card-text:last-child {
+  color: #7a7878;
+}
+.card-img-top {
+  border-radius: 4px 20px 4px 20px;
+}
+
 .checkout-order,
 .deliver-option,
 .location-input {
   display: none;
+}
+
+.order-feedback{
+	border: 1px #ff7e00 solid;
+	border-radius: 4px;
+	/* height: 15%; */
 }
 /* order page style end */
