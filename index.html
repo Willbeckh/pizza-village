@@ -15,53 +15,110 @@
     <!-- photo attribute: Photo by <a href="https://unsplash.com/@shouravsheikh01?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Shourav Sheikh</a> on <a href="https://unsplash.com/images/food/pizza?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
    -->
     <!-- pizza order page start -->
-    <section>
-      <form action="" class="pizza-form">
-        <div class="pizza-size">
-          <input type="radio" name="size" value="500" required />
-          <label>small</label>
-          <input type="radio" name="size" value="700" required />
-          <label>medium</label>
-          <input type="radio" name="size" value="1000" checked required />
-          <label>large</label>
+    <section class="order-page">
+      <div class="container p-4">
+        <h3 class="mb-5 text-center order-heading">
+          Order the <span class="title">Pizza</span> you crave for...
+        </h3>
+        <div class="order-banner-content row">
+          <div class="card col">
+            <img
+              src="./src/images/display-img.jpg"
+              class="card-img-top"
+              alt="half pizza"
+            />
+            <div class="card-body text-center">
+              <p class="card-text">Family pizza | small | medium</p>
+              <p class="card-text">toppings: tomato | Broccoli | Pepperoni</p>
+            </div>
+          </div>
+          <!-- form aside section -->
+          <div
+            class="col form-group d-flex justify-content-center align-items-center"
+          >
+            <form action="" class="pizza-form">
+              <div class="pizza-size p-2">
+                <p class="form-subtitles">Select size:</p>
+                <div>
+                  <input type="radio" name="size" value="500" required />
+                  <label>small</label>
+                </div>
+                <div>
+                  <input type="radio" name="size" value="700" required />
+                  <label>medium</label>
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    name="size"
+                    value="1000"
+                    checked
+                    required
+                  />
+                  <label>large</label>
+                </div>
+              </div>
+
+              <div class="toppings p-2 m-1">
+                <p class="form-subtitles">Toppings:</p>
+                <div>
+                  <input type="radio" name="topps" value="100" required />
+                  <label>Pepperoni</label>
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    name="topps"
+                    value="150"
+                    checked
+                    required
+                  />
+                  <label>Cheese</label>
+                </div>
+                <div>
+                  <input type="radio" name="topps" value="50" required />
+                  <label>Black Olives</label>
+                </div>
+              </div>
+
+              <div class="crust-type p-2">
+                <p class="form-subtitles">Crust Type:</p>
+                <select name="crust" class="form-select">
+                  <option>choose pizza crust</option>
+                  <option value="200">Gluten free</option>
+                  <option value="500">Crispy</option>
+                  <option value="300">Stuffed</option>
+                </select>
+              </div>
+              <div class="pizza-amount p-2">
+                <button class="subtract btn-sm btn text-white">-</button>
+                <span class="output">1</span>
+                <button class="add btn-sm btn text-white">+</button>
+
+                <button class="order-btn btn-sm btn text-white">
+                  Order now
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
 
-        <div class="toppings">
-          <input type="radio" name="topps" value="100"  required />
-          <label>Pepperoni</label>
-          <input type="radio" name="topps" value="150" checked required />
-          <label>Cheese</label>
-          <input type="radio" name="topps" value="50" required />
-          <label>Black Olives</label>
+        <div class="order-feedback row container">
+          <p class="feedback-text text-center"></p>
+          <button class="btn btn-sm checkout-order text-white">checkout</button>
         </div>
 
-        <div class="crust-type">
-          <select name="crust" class="crust">
-            <option>choose pizza crust</option>
-            <option value="200" >Gluten free</option>
-            <option value="500">Crispy</option>
-            <option value="300">Stuffed</option>
-          </select>
+        <div class="deliver-option">
+          <p>Would you like your order to be delivered at a cost of: 200</p>
+          <input
+            type="text"
+            placeholder="Enter your location"
+            class="location-input"
+          />
+          <button class="btn yes">Yes</button>
+          <button class="btn no">No</button>
         </div>
-        <button class="order-btn btn btn-outline-warning">Order now -_-</button>
-      </form>
-
-      <div class="pizza-amount">
-        <button class="btn subtract">-</button>
-        <span class="output">1</span>
-        <button class="btn add">+</button>
-      </div>
-      <button class="btn checkout-order">checkout</button>
-
-      <div class="deliver-option">
-        <p>Would you like your order to be delivered at a cost of: 200</p>
-        <input type="text" placeholder="Enter your location" class="location-input">
-        <button class="btn yes">Yes</button>
-        <button class="btn no">No</button>
-      </div>
-
-      <div class="order-feedback">
-        <p class="feedback-text"></p>
+        <button class="btn mt-5 btn-sm go-back-btn"><</button>
       </div>
     </section>
     <!-- pizza order page end -->
