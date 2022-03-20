@@ -1,7 +1,11 @@
+let numberOfPizzas = parseInt($(".output").text());
+
 $().ready(function () {
   console.log("page loaded!");
 
   validateForm();
+  
+  addPizzaAmount();
 });
 
 // form validate
@@ -12,30 +16,42 @@ const validateForm = () => {
     const topps = $("input[name=topps]:checked").val();
     const crust = $(".crust").val();
 
-    // validateError();
-    let order = new Pizza(size, topps, crust);
+    let order = new Pizza(size, topps, crust, numberOfPizzas);
     console.log(order.getPizzaDetails());
-    return this.reset();
+    // $(".feedback-text").text(order.getPizzaDetails());
+
+    // add checkout show code
+    // return this.reset();
   });
 };
 
-// pizza constructor
+// pizza constructor object
 class Pizza {
-  constructor(size, toppings, crust) {
-    this.size = size;
+  constructor(sizeOfPizza, toppings, pizzaCrust, orders, grandTotal) {
+    this.sizeOfPizza = sizeOfPizza;
     this.toppings = toppings;
-    this.crust = crust;
+    this.pizzaCrust = pizzaCrust;
+    this.orders = orders;
+    this.grandTotal = grandTotal;
   }
   getPizzaDetails() {
-    return `pizza size: ${this.size}, toppings : ${this.toppings} & crust choice ${this.crust}`;
+    return `You ordered ${this.orders} pizza(s) of size: ${this.sizeOfPizza}, toppings : ${this.toppings} & pizza crust: ${this.pizzaCrust}`;
   }
-  calculateCost() {
-    let pepperoni = 100;
-    let roast = 50;
-    let olives = 80;
-  }
+
+  // try calculate the total
+  // try use a prototype for
 }
 
-const validateError = () => {
-  alert("need to fill pizza details");
+let addPizzaAmount = () => {
+  $(".add-pizza").click(function () {
+    // handle edge-cases
+    if (numberOfPizzas === 10)
+      return alert("cannot place order for more than 10 pizzas at a go");
+    $(".output").text(++numberOfPizzas);
+  });
+
+  $(".deduct-pizza").click(function () {
+    if (numberOfPizzas === 1) return alert("number of pizzas must be 1");
+    $(".output").text(--numberOfPizzas);
+  });
 };
