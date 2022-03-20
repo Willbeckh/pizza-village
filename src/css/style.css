@@ -1,7 +1,15 @@
 /* General Styles Start */
 * {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 /* General Styles End */
+
+/* order page style start */
+.checkout-order,
+.deliver-option,
+.location-input {
+  display: none;
+}
+/* order page style end */
