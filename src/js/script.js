@@ -54,20 +54,16 @@ class Pizza {
 
   // checkout order
   orderCheckout() {
-    // formData();
     $(".checkout-order").click(function () {
-      // orderOutput.text(`Total cost is: ${totalCost}`);
-      // $(".order-btn").hide();
-
+      alertAction();
       $(".deliver-option").show(function () {
+        $(".location-input").css("display", "block");
         $(".btn.yes").click(() => {
-          $(".location-input").css("display", "block");
-          return alert("your order will be delivered in a few");
+          return userFeedback();
         });
-
         $(".btn.no").click(() => {
           $(".deliver-option").css("display", "none");
-          return alert("Thank you!, enjoy your meal");
+          // return userFeedback();
         });
       });
     });
@@ -80,10 +76,37 @@ let addPizzaAmount = () => {
     // handle edge-cases
     if (numberOfPizzas === 10)
       return alert("cannot place order for more than 10 pizzas at a go");
-    $(".output").text(++numberOfPizzas);
+    $(".output").text(numberOfPizzas+=1);
   });
   $(".subtract").click(function () {
     if (numberOfPizzas === 1) return alert("number of pizzas must be 1");
     $(".output").text(--numberOfPizzas);
   });
+};
+
+// toggle page
+$(".order-now").click(function () {
+  $(".landing-page").css("display", "none");
+  $(".order-page").css("display", "block");
+});
+
+$(".go-back-btn").click(function () {
+  $(".order-page").css("display", "none");
+  $(".landing-page").css("display", "block");
+});
+
+//  messages modals logic
+let alertAction = () => {
+  $(".order-alert-box").slideDown();
+  setTimeout(() => {
+    $(".order-alert-box").slideUp();
+  }, 2000);
+};
+
+// deliver message
+let userFeedback = () => {
+  $(".deliver-alert-box").slideDown();
+  setTimeout(() => {
+    $(".deliver-alert-box").slideUp();
+  }, 2000);
 };
