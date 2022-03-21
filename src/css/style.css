@@ -1,7 +1,122 @@
-/* General Styles Start */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap"); /* General Styles Start */
 * {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+.btn {
+  background-color: #ff7e00;
+  font-weight: 500;
+  /* font-size: 1.2em; */
 }
 /* General Styles End */
+
+/* landing-page styles start */
+.landing-page {
+  height: 100vh;
+  /* background-color: red; */
+}
+.landing-page-bg-img {
+  height: 100vh;
+  /* width: auto; */
+}
+
+.main-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.hero {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.fast {
+  font-size: 6em;
+  font-weight: 900;
+  font-family: "Raleway", sans-serif;
+}
+
+.catch-phrase {
+  font-weight: 900;
+  font-size: 3em;
+  line-height: 40px;
+  padding-top: 40px;
+}
+.pizza-text {
+  color: #ff7e00;
+}
+.order-now {
+  background-color: #1f345f;
+  border-radius: 60px;
+}
+.r-arrow {
+  color: #ff7e00;
+  font-size: 100%;
+}
+/* landing-page styles end */
+
+/* order page style start */
+.order-page {
+  height: 100vh;
+  display: none;
+}
+.order-heading {
+  font-weight: 800;
+}
+span.title {
+  color: #ff7e00;
+}
+.form-subtitles {
+  font-weight: bold;
+}
+.card {
+  border: none;
+}
+.card-text:first-of-type {
+  font-weight: bold;
+}
+.card-text:last-child {
+  color: #7a7878;
+}
+.card-img-top {
+  border-radius: 4px 20px 4px 20px;
+}
+
+.checkout-order,
+.deliver-option,
+.location-input {
+  display: none;
+}
+
+.order-feedback {
+  border: 1px #ff7e00 solid;
+  border-radius: 4px;
+  /* height: 15%; */
+}
+/* order page style end */
+/* alert popup start */
+.order-alert-box, .deliver-alert-box {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 30%;
+  height: 40px;
+  background-color: rgb(22, 184, 30);
+  border-radius: 4px;
+  /* z-index: 1; */
+  display: none;
+}
+
+.alert-text, .deliver-text {
+  text-align: center;
+  padding: 2px;
+  color: #fff;
+}
+/* alert popup end */
