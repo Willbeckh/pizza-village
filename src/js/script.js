@@ -18,7 +18,6 @@ const formData = () => {
     const crust = parseInt($(".form-select option:selected").val());
     let totalCost = numberOfPizzas * (size + topps + crust);
 
-    console.log(crust);
     //for getting text content only.
     const sizeChoice = $("input[name=size]:checked + label").text();
     const crustChoice = $(".crust option:selected").text();
@@ -35,7 +34,7 @@ const formData = () => {
     orderOutput.text(order.getPizzaDetails());
     orderOutput.text(order.orderCheckout());
 
-    $(".checkout-order").show();
+    $(".checkout-order").css("display", "block");
   });
 };
 
@@ -63,7 +62,6 @@ class Pizza {
         });
         $(".btn.no").click(() => {
           $(".deliver-option").css("display", "none");
-          // return userFeedback();
         });
       });
     });
@@ -76,7 +74,7 @@ let addPizzaAmount = () => {
     // handle edge-cases
     if (numberOfPizzas === 10)
       return alert("cannot place order for more than 10 pizzas at a go");
-    $(".output").text(numberOfPizzas+=1);
+    $(".output").text((numberOfPizzas += 1));
   });
   $(".subtract").click(function () {
     if (numberOfPizzas === 1) return alert("number of pizzas must be 1");
