@@ -8,7 +8,6 @@
 .btn {
   background-color: #ff7e00;
   font-weight: 500;
-  /* font-size: 1.2em; */
 }
 /* General Styles End */
 
@@ -88,20 +87,36 @@ span.title {
   border-radius: 4px 20px 4px 20px;
 }
 
+/* .form-group {
+  background-color: rgba(14, 13, 13, 0.986);
+  background-image: url("../images/pizza-slice.png");
+  background-position: center;
+  border-radius: 8px;
+  background-size: contain;
+  color: rgb(24, 230, 202);
+} */
 .checkout-order,
 .deliver-option,
 .location-input {
   display: none;
 }
 
+.checkout-order {
+  height: 1%;
+  padding: 0.1em;
+}
 .order-feedback {
   border: 1px #ff7e00 solid;
   border-radius: 4px;
-  /* height: 15%; */
+}
+.order-feedback p {
+  text-align: center;
 }
 /* order page style end */
+
 /* alert popup start */
-.order-alert-box, .deliver-alert-box {
+.order-alert-box,
+.deliver-alert-box {
   position: fixed;
   top: 0;
   left: 50%;
@@ -110,11 +125,11 @@ span.title {
   height: 40px;
   background-color: rgb(22, 184, 30);
   border-radius: 4px;
-  /* z-index: 1; */
   display: none;
 }
 
-.alert-text, .deliver-text {
+.alert-text,
+.deliver-text {
   text-align: center;
   padding: 2px;
   color: #fff;
