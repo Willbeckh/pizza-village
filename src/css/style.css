@@ -87,14 +87,6 @@ span.title {
   border-radius: 4px 20px 4px 20px;
 }
 
-/* .form-group {
-  background-color: rgba(14, 13, 13, 0.986);
-  background-image: url("../images/pizza-slice.png");
-  background-position: center;
-  border-radius: 8px;
-  background-size: contain;
-  color: rgb(24, 230, 202);
-} */
 .checkout-order,
 .deliver-option,
 .location-input {

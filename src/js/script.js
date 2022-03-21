@@ -22,6 +22,7 @@ const formData = () => {
     const crustChoice = $(".crust option:selected").text();
     const toppingsChoice = $("input[name=topps]:checked + label").text();
 
+    // creates new pizza object
     let order = new Pizza(
       sizeChoice,
       toppingsChoice,
@@ -34,6 +35,7 @@ const formData = () => {
     orderOutput.text(order.orderCheckout());
 
     $(".checkout-order").css("display", "block");
+    return this.reset();
   });
 };
 
