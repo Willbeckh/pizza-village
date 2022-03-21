@@ -8,6 +8,10 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <link rel="stylesheet" href="./src/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="stylesheet" href="./src/css/style.css" />
     <title>Pizza village</title>
   </head>
@@ -15,12 +19,12 @@
     <!-- popover container start-->
     <div class="order-confirmed">
       <div class="order-alert-box">
-        <p class="alert-text">than you, your order has been received</p>
+        <p class="alert-text">Thank you, your order has been received</p>
       </div>
     </div>
     <div class="deliver-message">
       <div class="deliver-alert-box">
-        <p class="deliver-text">hey this is to be delivered</p>
+        <p class="deliver-text"></p>
       </div>
     </div>
     <!-- popover container end-->
@@ -33,9 +37,13 @@
             <div class="main-content">
               <div class="hero">
                 <div class="hero-welcome-text row">
-                  <div class="fast col">Fast</div>
+                  <div class="fast col animate__animated animate__backInLeft">
+                    Fast
+                  </div>
                   <div class="col catch-phrase">
-                    <div class="pizza-text">Pizza</div>
+                    <div class="pizza-text animate__animated animate__tada">
+                      Pizza
+                    </div>
                     <div>Delivery</div>
                   </div>
                 </div>
@@ -43,7 +51,9 @@
                   Fresh, Tasty pizzas wherever you are. <br />
                   Dial a pizza here at pizza village!
                 </p>
-                <button class="btn mb-5 text-white order-now">
+                <button
+                  class="btn mb-5 text-white order-now animate__animated animate__fadeInUp"
+                >
                   Order now <span class="r-arrow">&rarr;</span>
                 </button>
                 <p>
@@ -113,13 +123,7 @@
                   <label>medium</label>
                 </div>
                 <div>
-                  <input
-                    type="radio"
-                    name="size"
-                    value="1000"
-                    checked
-                    required
-                  />
+                  <input type="radio" name="size" value="1000" required />
                   <label>large</label>
                 </div>
               </div>
@@ -131,13 +135,7 @@
                   <label>Pepperoni</label>
                 </div>
                 <div>
-                  <input
-                    type="radio"
-                    name="topps"
-                    value="150"
-                    checked
-                    required
-                  />
+                  <input type="radio" name="topps" value="150" required />
                   <label>Cheese</label>
                 </div>
                 <div>
@@ -149,9 +147,8 @@
               <div class="crust-type p-2">
                 <p class="form-subtitles">Crust Type:</p>
                 <select name="crust" class="form-select">
-                  <option>choose pizza crust</option>
-                  <option value="200">Gluten free</option>
                   <option value="500">Crispy</option>
+                  <option value="200">Gluten free</option>
                   <option value="300">Stuffed</option>
                 </select>
               </div>
@@ -168,14 +165,17 @@
           </div>
         </div>
 
-        <div class="order-feedback row container">
-          <p class="feedback-text text-center"></p>
-          <p class="user-feedback"></p>
-          <button class="btn btn-sm checkout-order text-white">checkout</button>
+        <div
+          class="order-feedback p-3 row container d-flex justify-content-center"
+        >
+          <p class="feedback-text align-items-center"></p>
+          <button class="btn btn-group-sm checkout-order text-white">
+            checkout
+          </button>
         </div>
 
         <div class="deliver-option">
-          <p>Would you like your order to be delivered at a cost of: 200</p>
+          <p>Would you like your order to be delivered at a cost of: 100</p>
           <input
             type="text"
             placeholder="Enter your location"
