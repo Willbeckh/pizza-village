@@ -1,6 +1,5 @@
 let numberOfPizzas = parseInt($(".output").text());
 let orderOutput = $(".feedback-text"); // holds output of pizza order
-let feedback = $(".user-feedback");
 
 $().ready(function () {
   console.log("page loaded!");
@@ -58,6 +57,10 @@ class Pizza {
       $(".deliver-option").show(function () {
         $(".location-input").css("display", "block");
         $(".btn.yes").click(() => {
+          let location = $(".location-input").val();
+          $(".deliver-text").text(
+            `Order to be delivered to "${location}" in a few minutes.`
+          );
           return userFeedback();
         });
         $(".btn.no").click(() => {
@@ -106,5 +109,5 @@ let userFeedback = () => {
   $(".deliver-alert-box").slideDown();
   setTimeout(() => {
     $(".deliver-alert-box").slideUp();
-  }, 2000);
+  }, 3000);
 };
