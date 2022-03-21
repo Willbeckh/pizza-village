@@ -1,5 +1,6 @@
 let numberOfPizzas = parseInt($(".output").text());
 let orderOutput = $(".feedback-text"); // holds output of pizza order
+let feedback = $(".user-feedback");
 
 $().ready(function () {
   console.log("page loaded!");
@@ -12,11 +13,12 @@ $().ready(function () {
 const formData = () => {
   $(".pizza-form").submit(function (submit) {
     submit.preventDefault();
-    const size = Number($("input[name=size]:checked").val());
-    const topps = Number($("input[name=topps]:checked").val());
-    const crust = Number($(".crust").val());
+    const size = parseInt($("input[name=size]:checked").val());
+    const topps = parseInt($("input[name=topps]:checked").val());
+    const crust = parseInt($(".form-select option:selected").val());
     let totalCost = numberOfPizzas * (size + topps + crust);
 
+    console.log(crust);
     //for getting text content only.
     const sizeChoice = $("input[name=size]:checked + label").text();
     const crustChoice = $(".crust option:selected").text();
@@ -52,7 +54,7 @@ class Pizza {
 
   // checkout order
   orderCheckout() {
-    formData();
+    // formData();
     $(".checkout-order").click(function () {
       // orderOutput.text(`Total cost is: ${totalCost}`);
       // $(".order-btn").hide();
