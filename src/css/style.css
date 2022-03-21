@@ -56,14 +56,15 @@
   border-radius: 60px;
 }
 .r-arrow {
-	color: #ff7e00;
-	font-size: 100%;
+  color: #ff7e00;
+  font-size: 100%;
 }
 /* landing-page styles end */
 
 /* order page style start */
 .order-page {
   height: 100vh;
+  display: none;
 }
 .order-heading {
   font-weight: 800;
@@ -99,3 +100,23 @@ span.title {
   /* height: 15%; */
 }
 /* order page style end */
+/* alert popup start */
+.order-alert-box, .deliver-alert-box {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 30%;
+  height: 40px;
+  background-color: rgb(22, 184, 30);
+  border-radius: 4px;
+  /* z-index: 1; */
+  display: none;
+}
+
+.alert-text, .deliver-text {
+  text-align: center;
+  padding: 2px;
+  color: #fff;
+}
+/* alert popup end */
